@@ -83,7 +83,7 @@ def fetch_issues() -> list:
  
     while True:
         data = jira_request(
-            f"search?jql={jql}&startAt={start}&maxResults={page_size}"
+            f"search/jql?jql={jql}&startAt={start}&maxResults={page_size}"
             f"&fields=summary,status,assignee,duedate"
         )
         batch = data.get("issues", [])

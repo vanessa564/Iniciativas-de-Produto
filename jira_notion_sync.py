@@ -57,7 +57,7 @@ def status_emoji(status: str) -> str:
 # ── Jira ──────────────────────────────────────────────────────────────────────
 def jira_request(path: str) -> dict:
     credentials = base64.b64encode(f"{JIRA_EMAIL}:{JIRA_TOKEN}".encode()).decode()
-    url = f"https://{JIRA_DOMAIN}/rest/api/3/{path}"
+url = f"https://{JIRA_DOMAIN}/rest/api/2/{path}"
     req = urllib.request.Request(
         url,
         headers={

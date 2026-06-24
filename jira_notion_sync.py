@@ -79,7 +79,7 @@ def fetch_issues() -> list:
     issues = []
     start = 0
     page_size = 50
-    jql = urllib.parse.quote(f'project = "{JIRA_PROJECT}" ORDER BY status ASC, updated DESC')
+    jql = urllib.parse.quote(f'project = PD ORDER BY status ASC, updated DESC')
  
     while True:
         data = jira_request(
